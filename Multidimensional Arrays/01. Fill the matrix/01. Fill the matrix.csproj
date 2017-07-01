@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CF6F8CDB-D1CB-4470-B62B-032A22F5EC39}</ProjectGuid>
+    <ProjectGuid>{0DB0D934-F40D-4282-98C9-665DD1DCECBF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_01.Allocate_array</RootNamespace>
-    <AssemblyName>_01.Allocate_array</AssemblyName>
+    <RootNamespace>_01.Fill_the_matrix</RootNamespace>
+    <AssemblyName>_01.Fill_the_matrix</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllocateArray.cs" />
+    <Compile Include="FillTheMatrix.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
