@@ -59,7 +59,7 @@ namespace _01.Fill_the_matrix
                         matrix[row, col] = increment++;
                     }
                 }
-                
+
             }
         }
 
@@ -67,32 +67,40 @@ namespace _01.Fill_the_matrix
         {
             int rowIndex = matrix.GetLength(0) - 1;
             int colIndex = 0;
+            int increment = 1;
 
-            while (rowIndex < matrix.GetLength(0) && colIndex < matrix.GetLength(1))
+            while (increment <= n * n)
             {
-                int increment = 1;
 
                 if (rowIndex != 0)
                 {
-                    FillDiagonalMatrixC(matrix, increment, rowIndex, colIndex);
+                    increment = FillDiagonalMatrixC(matrix, rowIndex, colIndex, increment);
                     rowIndex--;
                 }
                 else
                 {
-                    FillDiagonalMatrixC(matrix, increment, rowIndex, colIndex);
+                    increment = FillDiagonalMatrixC(matrix, rowIndex, colIndex, increment);
                     colIndex++;
                 }
             }
         }
 
-        static void FillDiagonalMatrixC(int[,] matrix, int increment, int rowIndex, int colIndex)
+        private static int FillDiagonalMatrixC(int[,] matrix, int rowIndex, int colIndex, int increment)
         {
-            while (rowIndex < matrix.GetLength(0) && colIndex < matrix.GetLength(1))
+            int row = rowIndex;
+            int col = colIndex;
+            while (row < matrix.GetLength(0) && col < matrix.GetLength(1))
             {
-                matrix[rowIndex++, colIndex++] = increment;
+
+                matrix[row, col] = increment;
                 increment++;
+                row++;
+                col++;
             }
+
+            return increment;
         }
+
 
         static void PrintMatrix(int[,] array)
         {
@@ -107,10 +115,10 @@ namespace _01.Fill_the_matrix
                     }
                     else
                     {
-                        Console.Write("{0} ", array[row,col]);
+                        Console.Write("{0} ", array[row, col]);
                     }
                 }
-                
+
                 Console.WriteLine();
             }
         }
