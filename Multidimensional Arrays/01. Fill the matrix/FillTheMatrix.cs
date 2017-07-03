@@ -93,14 +93,18 @@ namespace _01.Fill_the_matrix
             int col = colIndex;
             while (row < matrix.GetLength(0) && col < matrix.GetLength(1))
             {
-
-                matrix[row, col] = increment;
-                increment++;
-                row++;
-                col++;
+                NewMethod(matrix, ref increment, ref row, ref col);
             }
 
             return increment;
+        }
+
+        private static void NewMethod(int[,] matrix, ref int increment, ref int row, ref int col)
+        {
+            matrix[row, col] = increment;
+            increment++;
+            row++;
+            col++;
         }
 
         static void FillMatrixD(int[,] matrix, int n)
