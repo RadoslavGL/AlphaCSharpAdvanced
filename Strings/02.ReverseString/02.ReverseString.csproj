@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{086AFDAC-A3A8-496A-B1B7-1C92EC913550}</ProjectGuid>
+    <ProjectGuid>{72F7CC0D-0CF4-4590-B344-DEB43F74540E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_7.BishopPathFinder</RootNamespace>
-    <AssemblyName>7.BishopPathFinder</AssemblyName>
+    <RootNamespace>_02.ReverseString</RootNamespace>
+    <AssemblyName>02.ReverseString</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BishopPathFinder.cs" />
+    <Compile Include="ReverseString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{086AFDAC-A3A8-496A-B1B7-1C92EC913550}</ProjectGuid>
+    <ProjectGuid>{E9AE0F63-3444-4687-93F1-C9EACFB095BE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_7.BishopPathFinder</RootNamespace>
-    <AssemblyName>7.BishopPathFinder</AssemblyName>
+    <RootNamespace>_03.CorrectBracketsANDTests</RootNamespace>
+    <AssemblyName>03.CorrectBracketsANDTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BishopPathFinder.cs" />
+    <Compile Include="CorrectBracketsANDTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{086AFDAC-A3A8-496A-B1B7-1C92EC913550}</ProjectGuid>
+    <ProjectGuid>{C396675D-F8BE-429B-BCA4-D9D73D133128}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_7.BishopPathFinder</RootNamespace>
-    <AssemblyName>7.BishopPathFinder</AssemblyName>
+    <RootNamespace>_04.Sub_stringInText</RootNamespace>
+    <AssemblyName>04.Sub-stringInText</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BishopPathFinder.cs" />
+    <Compile Include="Sub-stringInText .cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

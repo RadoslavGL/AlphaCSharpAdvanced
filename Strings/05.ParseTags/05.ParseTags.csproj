@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{086AFDAC-A3A8-496A-B1B7-1C92EC913550}</ProjectGuid>
+    <ProjectGuid>{B6151FC9-049B-4216-8F1B-8206F88BA68D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_7.BishopPathFinder</RootNamespace>
-    <AssemblyName>7.BishopPathFinder</AssemblyName>
+    <RootNamespace>_05.ParseTags</RootNamespace>
+    <AssemblyName>05.ParseTags</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BishopPathFinder.cs" />
+    <Compile Include="ParseTags.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

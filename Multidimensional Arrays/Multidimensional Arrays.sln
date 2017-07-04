@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.LargestAreaInMatrix", "0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.SequenceInMatrix-Corrected", "03.SequenceInMatrix-Corrected\03.SequenceInMatrix-Corrected.csproj", "{1D84678B-570C-4F6B-AC1A-780873D9937F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.BishopPathFinder", "7.BishopPathFinder\7.BishopPathFinder.csproj", "{086AFDAC-A3A8-496A-B1B7-1C92EC913550}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{1D84678B-570C-4F6B-AC1A-780873D9937F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D84678B-570C-4F6B-AC1A-780873D9937F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D84678B-570C-4F6B-AC1A-780873D9937F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{086AFDAC-A3A8-496A-B1B7-1C92EC913550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086AFDAC-A3A8-496A-B1B7-1C92EC913550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086AFDAC-A3A8-496A-B1B7-1C92EC913550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086AFDAC-A3A8-496A-B1B7-1C92EC913550}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
