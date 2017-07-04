@@ -105,6 +105,7 @@ class SequenceInMatrix
                 {
                     max = currentMax;
                 }
+                currentMax = 1;
             }
         }
 

@@ -24,23 +24,30 @@ class AppearanceCount
 
         Array.Sort(numbers);
 
-        for (int i = 1; i < numbers.Length; i++)
+        for (int i = 0; i < numbers.Length; i++)
         {
-            if (numbers[i] == numbers[i-1])
+            int indexIncrement = 1;
+            while (((i + indexIncrement) < numbers.Length) && numbers[i] == numbers[i + indexIncrement])
             {
-                currentFreq++;
-                if (currentFreq > largestFreq)
+                if (numbers[i] == numbers[i + indexIncrement])
                 {
-                    largestFreq = currentFreq;
+                    currentFreq++;
+                    if (currentFreq > largestFreq)
+                    {
+                        largestFreq = currentFreq;
+                    }
+                    indexIncrement++;
+
                 }
-            }
-            else
-            {
-                if (currentFreq > largestFreq)
+                else
                 {
-                    largestFreq = currentFreq;
+                    indexIncrement++;
+                    if (currentFreq > largestFreq)
+                    {
+                        largestFreq = currentFreq;
+                    }
                 }
-                currentFreq = 1;
+                
             }
         }
 
