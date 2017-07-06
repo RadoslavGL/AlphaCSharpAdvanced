@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C7CEAD0-450F-45CA-A520-7B4943B8A1B3}</ProjectGuid>
+    <ProjectGuid>{1C628A6B-6364-47A6-8988-D0E9922E48DF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_00.Demo</RootNamespace>
-    <AssemblyName>00.Demo</AssemblyName>
+    <RootNamespace>_01.OddLines</RootNamespace>
+    <AssemblyName>01.OddLines</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="OddLines.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

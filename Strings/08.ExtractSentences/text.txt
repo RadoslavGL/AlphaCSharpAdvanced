@@ -1,0 +1,2 @@
+ain
+You may find it a little odd that a hack who grew up using a language with the ain't keyword would fall so head over heels in love with something as obtuse and arcane as regular expressions. I'm not sure how that works. But it does. Regular expressions rock.They should absolutely be a key part of every modern coder's toolkit.
