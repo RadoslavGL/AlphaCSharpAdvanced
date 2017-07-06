@@ -16,6 +16,10 @@ namespace _08.ExtractSentences
             int startIndex = 0;
             int endIndex = 0;
 
+                
+
+
+
         }
     }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{54B78848-FA42-4C3A-A166-8EC8611F3E7F}</ProjectGuid>
+    <ProjectGuid>{8C7CEAD0-450F-45CA-A520-7B4943B8A1B3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_08.ExtractSentences</RootNamespace>
-    <AssemblyName>08.ExtractSentences</AssemblyName>
+    <RootNamespace>_00.Demo</RootNamespace>
+    <AssemblyName>_00.Demo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExtractSentences.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
