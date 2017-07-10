@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A87EA894-1B90-4EC3-8629-B25587979E0F}</ProjectGuid>
+    <ProjectGuid>{1A8CF8C6-E211-48BC-B2BF-998BF9FD405A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_08.ExtractSentences_REDONE</RootNamespace>
-    <AssemblyName>08.ExtractSentences-REDONE</AssemblyName>
+    <RootNamespace>_02.EnterNumbers</RootNamespace>
+    <AssemblyName>02.EnterNumbers</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExtractSentences.cs" />
+    <Compile Include="EnterNumbers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

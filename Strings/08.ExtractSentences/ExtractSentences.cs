@@ -37,7 +37,7 @@ namespace _08.ExtractSentences
 
                 for (int i = 0; i < sentance.Length; i++)
                 {
-                    if (char.IsLetter(sentance[i]) == false)
+                    if (!char.IsLetter(sentance[i]))
                     {
                         nonLetters.Append(sentance[i]);
                     }
@@ -45,7 +45,7 @@ namespace _08.ExtractSentences
                 char[] splitChars = nonLetters.ToString().ToCharArray();
                 string[] words = sentance.Split(splitChars, StringSplitOptions.RemoveEmptyEntries);
 
-                if (Array.IndexOf(words, word) > -1)
+                if (words.Contains(word))
                 {
                     result.Append(sentance.Trim());
                     result.Append(". ");
