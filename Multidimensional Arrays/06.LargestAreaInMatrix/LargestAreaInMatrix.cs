@@ -12,10 +12,27 @@ class LargestAreaInMatrix
         int n = Convert.ToInt32(dimensions[0]);
         int m = Convert.ToInt32(dimensions[1]);
 
-        int[,] matrix = new int[n, m];
+        int[,] matrix = new int[n, m];  
 
         FillTheMatrix(matrix);
 
+        int currentArea = 1;
+        int largestArea = 1;
+
+        for (int row = 0; row < n; row++)
+        {
+            for (int col = 0; col < m; col++)
+            {
+                int rowIndex = row;
+                int colIndex = col;
+                currentArea = FindArea(matrix, rowIndex, colIndex);
+
+                if (currentArea > largestArea)
+                {
+                    largestArea = currentArea;
+                }
+            }
+        }
     }
 
     public static void FillTheMatrix(int[,] matrix)
@@ -30,6 +47,28 @@ class LargestAreaInMatrix
                 matrix[row, col] = rowInput[col];
             }
         }
+    }
+
+    public static int FindArea(int[,] matrix, int rowIndex, int colIndex)
+    {
+        int currentArea = 1;
+        bool[,] boolMatrix = new bool[matrix.GetLength(0), matrix.GetLength(1)];
+
+        boolMatrix[rowIndex, colIndex] = true;
+
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                if (matrix[rowIndex, colIndex] == matrix[i, j] && boolMatrix[i, j] == false 
+                    && )
+                {
+
+                }
+            }
+        }
+
+        return currentArea;
     }
 }
 

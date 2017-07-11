@@ -12,20 +12,33 @@ namespace _04.BinarySearch
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            int[] numArr = new int[n];
-            for (int i = 0; i < numArr.Length; i++)
+
+            int[] arr = new int[n];
+
+            for (int i = 0; i < arr.Length; i++)
             {
-                numArr[i] = int.Parse(Console.ReadLine());
+                arr[i] = i + 1;
             }
+
+            Array.Sort(arr);
 
             int k = int.Parse(Console.ReadLine());
 
-            Array.Sort(numArr);
+            int largestNumber = Array.BinarySearch(arr, k);
 
-
-
-
-
+            if (largestNumber >= 0)
+            {
+                Console.WriteLine(arr[largestNumber]);
+            }
+            else
+            {
+                while (largestNumber < 0)
+                {
+                    k--;
+                    largestNumber = Array.BinarySearch(arr, k);
+                }
+                Console.WriteLine(arr[largestNumber]);
+            }
 
         }
     }
