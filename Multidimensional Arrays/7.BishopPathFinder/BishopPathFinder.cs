@@ -86,7 +86,6 @@ namespace _7.BishopPathFinder
                     default:
                         break;
                 }
-
             }
 
             return sumMoves;
@@ -147,7 +146,7 @@ namespace _7.BishopPathFinder
             int sumMoves, int moves, int[,] matrix, bool[,] matrixBool)
         {
             while (currentPositionX < matrix.GetLength(0) - 1
-                && currentPositionY > 0 - 1 && moves > 0)
+                && currentPositionY > 0 && moves > 0)
             {
                 moves--;
                 currentPositionX++;
