@@ -40,38 +40,124 @@ namespace _7.BishopPathFinder
             }
         }
 
-        static void PrintMatrix(int[,] array)
+        //static void PrintMatrix(int[,] array)
+        //{
+        //    for (int row = 0; row < array.GetLength(0); row++)
+        //    {
+        //        for (int col = 0; col < array.GetLength(1); col++)
+        //        {
+        //            if (col == (array.GetLength(1) - 1))
+        //            {
+        //                Console.Write(array[row, col]);
+
+        //            }
+        //            else
+        //            {
+        //                Console.Write("{0} ", array[row, col]);
+        //            }
+        //        }
+
+        //        Console.WriteLine();
+        //    }
+        //}
+
+        public static int SumMovements(int currentPositionX, int currentPositionY,
+            int[,] matrix, bool[,] matrixBool)
         {
-            for (int row = 0; row < array.GetLength(0); row++)
-            {
-                for (int col = 0; col < array.GetLength(1); col++)
-                {
-                    if (col == (array.GetLength(1) - 1))
-                    {
-                        Console.Write(array[row, col]);
-
-                    }
-                    else
-                    {
-                        Console.Write("{0} ", array[row, col]);
-                    }
-                }
-
-                Console.WriteLine();
-            }
-        }
-
-        public static void SumMovements(int[,] matrix, int sumMoves)
-        {
+            int sumMoves = 0;
             int changeInDirection = int.Parse(Console.ReadLine());
-            bool[,] matrixBool = new bool[matrix.GetLength(0), matrix.GetLength(1)];
 
             for (int i = 0; i < changeInDirection; i++)
             {
                 string[] directionAndMoves = Console.ReadLine().Split(' ');
                 string direction = directionAndMoves[0];
                 int moves = int.Parse(directionAndMoves[1]);
-                    
+
+                switch (direction)
+                {
+                    case "UR":
+                    case "RU": MoveUpRight(currentPositionX, currentPositionY, sumMoves, moves, matrix, matrixBool); break;
+                    case "LU":
+                    case "UL": MoveUpLeft(currentPositionX, currentPositionY, sumMoves, moves, matrix, matrixBool); break;
+                    case "DL":
+                    case "LD": MoveDownRight(currentPositionX, currentPositionY, sumMoves, moves, matrix, matrixBool); break;
+                    case "DR":
+                    case "RD": MoveDownLeft(currentPositionX, currentPositionY, sumMoves, moves, matrix, matrixBool); break;
+                    default:
+                        break;
+                }
+
+            }
+
+            return sumMoves;
+        }
+        public static void MoveUpRight(int currentPositionX, int currentPositionY,
+            int sumMoves, int moves, int[,] matrix, bool[,] matrixBool)
+        {
+            while (currentPositionX > 0 && currentPositionY < matrix.GetLength(1) - 1 && moves > 0)
+            {
+                moves--;
+                currentPositionX--;
+                currentPositionY++;
+                if (matrixBool[currentPositionX, currentPositionY] == false)
+                {
+                    sumMoves += matrix[currentPositionX, currentPositionY];
+                    matrixBool[currentPositionX, currentPositionY] = true;
+                }
+
+            }
+        }
+
+        public static void MoveUpLeft(int currentPositionX, int currentPositionY,
+            int sumMoves, int moves, int[,] matrix, bool[,] matrixBool)
+        {
+            while (currentPositionX > 0 && currentPositionY > 0 && moves > 0)
+            {
+                moves--;
+                currentPositionX--;
+                currentPositionY--;
+                if (matrixBool[currentPositionX, currentPositionY] == false)
+                {
+                    sumMoves += matrix[currentPositionX, currentPositionY];
+                    matrixBool[currentPositionX, currentPositionY] = true;
+                }
+
+            }
+        }
+
+        public static void MoveDownRight(int currentPositionX, int currentPositionY,
+            int sumMoves, int moves, int[,] matrix, bool[,] matrixBool)
+        {
+            while (currentPositionX < matrix.GetLength(0) - 1 
+                && currentPositionY < matrix.GetLength(1) - 1 && moves > 0)
+            {
+                moves--;
+                currentPositionX++;
+                currentPositionY++;
+                if (matrixBool[currentPositionX, currentPositionY] == false)
+                {
+                    sumMoves += matrix[currentPositionX, currentPositionY];
+                    matrixBool[currentPositionX, currentPositionY] = true;
+                }
+
+            }
+        }
+
+        public static void MoveDownLeft(int currentPositionX, int currentPositionY,
+            int sumMoves, int moves, int[,] matrix, bool[,] matrixBool)
+        {
+            while (currentPositionX < matrix.GetLength(0) - 1
+                && currentPositionY > 0 - 1 && moves > 0)
+            {
+                moves--;
+                currentPositionX++;
+                currentPositionY--;
+                if (matrixBool[currentPositionX, currentPositionY] == false)
+                {
+                    sumMoves += matrix[currentPositionX, currentPositionY];
+                    matrixBool[currentPositionX, currentPositionY] = true;
+                }
+
             }
         }
 
@@ -84,10 +170,16 @@ namespace _7.BishopPathFinder
             int[,] matrix = new int[n, m];
 
             FillTheMatrix(matrix);
-            PrintMatrix(matrix);
+            //PrintMatrix(matrix);
 
-            int sumMoves = 0;
-            SumMovements(matrix, sumMoves);
+            int currentPositionX = matrix.GetLength(0) - 1;
+            int currentPositionY = 0;
+
+            bool[,] matrixBool = new bool[matrix.GetLength(0), matrix.GetLength(1)];
+
+            
+
+            Console.WriteLine(SumMovements(currentPositionX, currentPositionY, matrix, matrixBool));
 
         }
     }
