@@ -87,10 +87,10 @@ namespace _7.BishopPathFinder
                         break;
                 }
             }
-
             return sumMoves;
+                
         }
-        public static void MoveUpRight(int currentPositionX, int currentPositionY,
+        public static int MoveUpRight(int currentPositionX, int currentPositionY,
             int sumMoves, int moves, int[,] matrix, bool[,] matrixBool)
         {
             while (currentPositionX > 0 && currentPositionY < matrix.GetLength(1) - 1 && moves > 0)
@@ -105,9 +105,11 @@ namespace _7.BishopPathFinder
                 }
 
             }
+
+            return sumMoves;
         }
 
-        public static void MoveUpLeft(int currentPositionX, int currentPositionY,
+        public static int MoveUpLeft(int currentPositionX, int currentPositionY,
             int sumMoves, int moves, int[,] matrix, bool[,] matrixBool)
         {
             while (currentPositionX > 0 && currentPositionY > 0 && moves > 0)
@@ -122,9 +124,10 @@ namespace _7.BishopPathFinder
                 }
 
             }
+            return sumMoves;
         }
 
-        public static void MoveDownRight(int currentPositionX, int currentPositionY,
+        public static int MoveDownRight(int currentPositionX, int currentPositionY,
             int sumMoves, int moves, int[,] matrix, bool[,] matrixBool)
         {
             while (currentPositionX < matrix.GetLength(0) - 1 
@@ -140,9 +143,10 @@ namespace _7.BishopPathFinder
                 }
 
             }
+            return sumMoves;
         }
 
-        public static void MoveDownLeft(int currentPositionX, int currentPositionY,
+        public static int MoveDownLeft(int currentPositionX, int currentPositionY,
             int sumMoves, int moves, int[,] matrix, bool[,] matrixBool)
         {
             while (currentPositionX < matrix.GetLength(0) - 1
@@ -158,6 +162,7 @@ namespace _7.BishopPathFinder
                 }
 
             }
+            return sumMoves;
         }
 
         static void Main(string[] args)
