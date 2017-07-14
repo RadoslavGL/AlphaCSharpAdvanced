@@ -19,35 +19,27 @@ class AppearanceCount
 
     public static int LargestFrequence(int[] numbers)
     {
-        int largestFreq = 1;
+        int largestFreq = 0;
         int currentFreq = 1;
 
         Array.Sort(numbers);
 
-        for (int i = 0; i < numbers.Length; i++)
+        for (int i = 0; i < numbers.Length - 1; i++)
         {
-            int indexIncrement = 1;
-            while (((i + indexIncrement) < numbers.Length) && numbers[i] == numbers[i + indexIncrement])
+            for (int j = i+1; j < numbers.Length; j++)
             {
-                if (numbers[i] == numbers[i + indexIncrement])
+                if (numbers[i] == numbers[j])
                 {
                     currentFreq++;
                     if (currentFreq > largestFreq)
                     {
                         largestFreq = currentFreq;
                     }
-                    indexIncrement++;
-
                 }
                 else
                 {
-                    indexIncrement++;
-                    if (currentFreq > largestFreq)
-                    {
-                        largestFreq = currentFreq;
-                    }
+                    currentFreq = 1;
                 }
-                
             }
         }
 

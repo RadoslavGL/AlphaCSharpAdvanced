@@ -14,33 +14,18 @@ namespace _7_BishopPathFinder_New
             int currentY = 0;
             int valueMatrix = 0;
             matrix[currentX, currentY] = valueMatrix;
-
-            while (currentX > 0)
+            for (int i = 0; i < matrix.GetLength(1); i++)
             {
-                currentX--;
-                valueMatrix += 3;
-                matrix[currentX, currentY] = valueMatrix;
-                FillDiagonals(valueMatrix, currentX, currentY, matrix);
+                for (int j = matrix.GetLength(0) - 1; j > - 1; j--)
+                {
+                    matrix[j, i] = valueMatrix;
+                    valueMatrix += 3;
+                }
+                valueMatrix = matrix[matrix.GetLength(0) - 1, i] + 3;
             }
-            while (currentY < matrix.GetLength(1) - 1)
-            {
-                currentY++;
-                valueMatrix += 3;
-                matrix[currentX, currentY] = valueMatrix;
-                FillDiagonals(valueMatrix, currentX, currentY, matrix);
-
-            }
+            
         }
-        public static void FillDiagonals(int valueMatrix, int currentX, int currentY, int[,] matrix)
-        {
-            while (currentX < matrix.GetLength(0) - 1 && currentY < matrix.GetLongLength(1) - 1)
-            {
-                currentX++;
-                currentY++;
-                matrix[currentX, currentY] = valueMatrix;
-                
-            }
-        }
+        
 
         static void PrintMatrix(int[,] array)
         {
@@ -110,7 +95,7 @@ namespace _7_BishopPathFinder_New
                         break;
                     case "DR":
                     case "RD":
-                        while (currentX < (matrix.GetLength(0) - 1) && currentY > 0 && steps > 0)
+                        while (currentX < (matrix.GetLength(0) - 1) && currentY < (matrix.GetLength(1) - 1) && steps > 0)
                         {
                             steps--;
                             currentX++;
@@ -124,6 +109,7 @@ namespace _7_BishopPathFinder_New
                 }
 
             }
+
         }
 
         static void Main(string[] args)
@@ -135,7 +121,6 @@ namespace _7_BishopPathFinder_New
             int[,] matrix = new int[n, m];
             FillMatrix(matrix);
 
-            //PrintMatrix(matrix);
 
             int moves = int.Parse(Console.ReadLine());
 
@@ -143,6 +128,9 @@ namespace _7_BishopPathFinder_New
             int currentY = 0;
             int sumMoves = 0;
             TotalSum(matrix, moves, ref currentX, ref currentY, ref sumMoves);
+
+            //PrintMatrix(matrix);
+
 
             Console.WriteLine(sumMoves);
         }
