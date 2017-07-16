@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C59F9E30-5DDF-4453-8F54-8835D271D5F7}</ProjectGuid>
+    <ProjectGuid>{67156A28-6765-4B50-AE12-263431CDF57B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_13.MergeSort</RootNamespace>
-    <AssemblyName>13.MergeSort</AssemblyName>
+    <RootNamespace>_14.QuickSort</RootNamespace>
+    <AssemblyName>14.QuickSort</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MergeSort.cs" />
+    <Compile Include="QuickSort.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
