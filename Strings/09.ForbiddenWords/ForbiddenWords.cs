@@ -13,20 +13,22 @@ namespace _09.ForbiddenWords
     {
         static void Main(string[] args)
         {
-            string text = "";
-            string forbiddenWords = "";
+            string sentences = Console.ReadLine();
+            string forbiddenWords = Console.ReadLine();
 
-            using (StreamReader inputReader = new StreamReader("input.txt"))
+            string[] forbiddenWordsArr = forbiddenWords.Split(new char[] { ' ', ' ' },
+                StringSplitOptions.RemoveEmptyEntries).ToArray();
+
+            StringBuilder sbSentences = new StringBuilder(sentences);
+
+            for (int i = 0; i < forbiddenWordsArr.Length; i++)
             {
-                text = inputReader.ReadLine();
-                forbiddenWords = inputReader.ReadLine();
+                string forbiddenArrMember = forbiddenWordsArr[i];
+                string replacement = new String('*', forbiddenArrMember.Length);
+                sbSentences.Replace(forbiddenArrMember, replacement);
             }
 
-            StringBuilder textSB = new StringBuilder();
-            string[] textWords = text.Split(' ');
-            string[] forbWordsStr = forbiddenWords.Split(' ');
-
-
+            Console.WriteLine(sbSentences.ToString());
         }
     }
 }

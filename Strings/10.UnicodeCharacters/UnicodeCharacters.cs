@@ -13,17 +13,24 @@ namespace _10.UnicodeCharacters
 
             string word = Console.ReadLine();
             char[] signs = word.ToCharArray();
-            for (int i = 0; i < signs.Length; i++)
-            {
-                ToUnicode(signs[i]);
-            }
-            Console.WriteLine();
+
+            StringBuilder sbUnicodeChars = new StringBuilder();
+
+            ToUnicode(signs, sbUnicodeChars);
+
+            Console.WriteLine(sbUnicodeChars.ToString().Trim());
         }
 
-        private static void ToUnicode(char input)
+        public static void ToUnicode(char[] signs, StringBuilder sbUnicodeChars)
         {
-            Console.Write("\\u{0:x4}", (uint)input); 
-            
+            for (int i = 0; i < signs.Length; i++)
+            {
+                sbUnicodeChars.Append("\\u" + ((int)signs[i]).ToString("X4"));
+
+            }
         }
     }
 }
+
+    
+

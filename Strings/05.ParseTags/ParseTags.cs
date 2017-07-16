@@ -15,7 +15,6 @@ class ParseTags
         int indexStartSearch = 0;
 
         StringBuilder sb = new StringBuilder(input);
-
         while (true)
         {
             indexFoundOpen = input.IndexOf("<upcase>", indexStartSearch);

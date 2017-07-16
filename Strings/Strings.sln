@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.ForbiddenWords", "09.For
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.UnicodeCharacters", "10.UnicodeCharacters\10.UnicodeCharacters.csproj", "{2F606A05-6422-4DA4-87C7-BC9DD9FE8812}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00.Demo", "00.Demo\00.Demo.csproj", "{06117CAC-C300-481E-B261-F1ED202E2B78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.ParseURL", "12.ParseURL\12.ParseURL.csproj", "{630C855C-750F-429E-A3C5-A4EB30DD76F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{2F606A05-6422-4DA4-87C7-BC9DD9FE8812}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F606A05-6422-4DA4-87C7-BC9DD9FE8812}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F606A05-6422-4DA4-87C7-BC9DD9FE8812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06117CAC-C300-481E-B261-F1ED202E2B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06117CAC-C300-481E-B261-F1ED202E2B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06117CAC-C300-481E-B261-F1ED202E2B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06117CAC-C300-481E-B261-F1ED202E2B78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{630C855C-750F-429E-A3C5-A4EB30DD76F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{630C855C-750F-429E-A3C5-A4EB30DD76F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{630C855C-750F-429E-A3C5-A4EB30DD76F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{630C855C-750F-429E-A3C5-A4EB30DD76F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
