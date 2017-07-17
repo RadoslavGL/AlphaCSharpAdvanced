@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SecretNumeralSystem", "01.SecretNumeralSystem\01.SecretNumeralSystem.csproj", "{617A623F-1DB3-4F6A-AF2F-9759B55DF2A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.Cards", "2.Cards\2.Cards.csproj", "{3FE5F45A-DA1D-45D0-95F7-6E5EE6666089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.SneakyTheSnake", "3.SneakyTheSnake\3.SneakyTheSnake.csproj", "{D02957B6-4D75-49FB-A9F6-A0EDEE8AB9A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{617A623F-1DB3-4F6A-AF2F-9759B55DF2A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{617A623F-1DB3-4F6A-AF2F-9759B55DF2A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{617A623F-1DB3-4F6A-AF2F-9759B55DF2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{617A623F-1DB3-4F6A-AF2F-9759B55DF2A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FE5F45A-DA1D-45D0-95F7-6E5EE6666089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FE5F45A-DA1D-45D0-95F7-6E5EE6666089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FE5F45A-DA1D-45D0-95F7-6E5EE6666089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FE5F45A-DA1D-45D0-95F7-6E5EE6666089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D02957B6-4D75-49FB-A9F6-A0EDEE8AB9A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D02957B6-4D75-49FB-A9F6-A0EDEE8AB9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D02957B6-4D75-49FB-A9F6-A0EDEE8AB9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D02957B6-4D75-49FB-A9F6-A0EDEE8AB9A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
