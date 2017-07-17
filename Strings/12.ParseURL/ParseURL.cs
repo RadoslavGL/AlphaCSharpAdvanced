@@ -14,23 +14,27 @@ namespace _12.ParseURL
         {
             string address = Console.ReadLine();
 
-            string[] splitters = new string[] { "://", "/", ""};
+            string[] splitters = new string[] { "://"};
             string[] partsAddress = address.Split(splitters, StringSplitOptions.RemoveEmptyEntries);
 
             StringBuilder sbProtocol = new StringBuilder(partsAddress[0]);
 
-            StringBuilder sbServer = new StringBuilder(partsAddress[1]);
+            string serverAndResources = partsAddress[1];
+            int indexOfFirstSlash = serverAndResources.IndexOf('/');
+
+            StringBuilder sbServer = new StringBuilder();
+
+            sbServer.Append(serverAndResources, 0, indexOfFirstSlash);
 
             StringBuilder sbResources = new StringBuilder();
-            for (int i = 2; i < partsAddress.Length; i++)
-            {
-                sbResources.Append('/');
-                sbResources.Append(partsAddress[i]);
-            }
+            sbResources.Append('/');
+            sbResources.Append(serverAndResources, 
+                (indexOfFirstSlash + 1), 
+                (serverAndResources.Length - (indexOfFirstSlash + 1)));
 
             Console.WriteLine("[protocol] = {0}\n[server] = {1}\n[resource] = {2}",
-                sbProtocol.ToString().Trim(),
-                sbServer.ToString().Trim(),
+                sbProtocol.ToString().TrimEnd(),
+                sbServer.ToString().TrimEnd(),
                 sbResources.ToString().TrimEnd());
 
         }
